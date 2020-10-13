@@ -1,0 +1,27 @@
+{
+    "posters": {
+        "films": [
+            {
+                "id": "0",
+                "title": "ironman",
+                "gender": "superheroes",
+                "duration":"190",
+                "director":"jhon"
+            },
+            {
+                "id": "1",
+                "title": "batman",
+                "gender": "superheroes",
+                "duration":"170",
+                "director":"mike"
+            },
+            {
+                "id": "2",
+                "title": "focus",
+                "gender": "action",
+                "duration":"210",
+                "director":"gary"
+            }
+        ]
+    }
+}
