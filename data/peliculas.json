@@ -1,0 +1,82 @@
+{
+    "posters": {
+        "films": [
+            {
+                "id": "0",
+                "title": "Ironman",
+                "gender": "Superheroes",
+                "duration":"190",
+                "director":"Jhon",
+                "img": "./img/ironman.jpg",
+                "actores":[
+                    {
+                        "id":"1",
+                        "name":"Jhon",
+                        "lastname":"Walter"
+                    },
+                    {
+                        "id":"2",
+                        "name":"Megan",
+                        "lastname":"Richard"
+                    },
+                    {
+                        "id":"3",
+                        "name":"Chris",
+                        "lastname":"Harry"
+                    }
+
+                ]
+            },
+            {   
+                "id": "1",
+                "title": "Spiderman",
+                "gender": "Superheroes",
+                "duration":"170",
+                "director":"Mike",
+                "img": "./img/spiderman.jpg",
+                "actores":[
+                    {
+                        "id":"1",
+                        "name":"Darwin",
+                        "lastname":"Scott"
+                    },
+                    {
+                        "id":"2",
+                        "name":"Laura",
+                        "lastname":"Mendez"
+                    },
+                    {
+                        "id":"3",
+                        "name":"Laura",
+                        "lastname":"Mendez"
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "title": "Focus",
+                "gender": "Action",
+                "duration":"210",
+                "director":"Gary",
+                "img": "./img/matrix.jpg",
+                "actores":[
+                    {
+                        "id":"1",
+                        "name":"Luka",
+                        "lastname":"Walter"
+                    },
+                    {
+                        "id":"2",
+                        "name":"Luka",
+                        "lastname":"Walter"
+                    },
+                    {
+                        "id":"3",
+                        "name":"Luka",
+                        "lastname":"Walter"
+                    }
+                ]
+            }
+        ]
+    }
+}
