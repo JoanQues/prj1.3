@@ -43,7 +43,7 @@
 							<a class="nav-link" href="#">Registro</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Tus pedidos</a>
+							<a class="nav-link" href="orders.html" tabindex="-1" aria-disabled="true">Tus pedidos</a>
 						</li>
 					</ul>
 					<form class="form-inline my-2 my-lg-0">
@@ -134,8 +134,8 @@
 				<div id="list-series" class="py-3">
 
 					<!-- Primera fila -->
-					<div class="row">
 						<!--Card-->
+						<div id="container-series" class="card-deck mb-3 text-center">
 						<div class="col-4 col-md">
 							<div class="card" style="width: 18rem;">
 								<img src="img/lacasadepapel.jpg" class="card-img-top" alt="...">
@@ -184,9 +184,9 @@
 								</ul>
 								<a href="#" class="btn btn-primary">Comprar</a>
 							</div>
-						</div>
+					</div>
 
-					</div> <!--end row-->
+					 <!--end row-->
 
 					<!-- Segona fila de 3 cards-->
 					<div class="row">
@@ -240,13 +240,11 @@
 								<a href="#" class="btn btn-primary">Comprar</a>
 							</div>
 						</div>
-
+					</div>
 					</div> <!--end row-->
-
-				</div>
 			</div>
-
 		</div>
+	</div>
 
 		<!--Dades de peu de pàgina -------------------------------------------->
 		<footer class="pt-4 my-md-5 pt-md-5 border-top">
@@ -294,6 +292,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
+					<p id="film-name"></p>
 					<form>
 						<div class="form-group">
 							<label>Cantidad:</label>
@@ -301,15 +300,15 @@
 						</div>
 						<div class="form-group">
 							<label>Precio:</label>
-							<input type="text" id="ped_precio" name="precio" value="50€" readonly disabled/>
+							<input type="text" id="ped_precio" name="precio" value="" readonly disabled/>
 						</div>
 						<!--Ús de input group-->
 						<div class="form-group">
 							<label>Medida:</label>
-							<div class="btn-group" role="group" aria-label="Medida">
-								<button type="button" class="btn btn-primary">Pequeño</button>
-								<button type="button" class="btn btn-primary">Medio</button>
-								<button type="button" class="btn btn-primary">Grande</button>
+							<div id="poster-sizes" class="btn-group" role="group" aria-label="Medida">
+								<button type="button" data-size="small" class="btn btn-primary">Pequeño</button>
+								<button type="button" data-size="medium" class="btn btn-primary">Medio</button>
+								<button type="button" data-size="large" class="btn btn-primary">Grande</button>
 							</div>
 						</div>
 						<!--ús de collapse  -- >
@@ -327,7 +326,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn btn-primary">Realizar pedido</button>
+					<button id="order-end" type="button" class="btn btn-primary" data-dismiss="modal">Realizar pedido</button>
 				</div>
 			</div>
 		</div>
@@ -336,7 +335,13 @@
 	<script src="./js/jquery-3.4.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script type="module" src="./js/app.js"></script>
+	<script type="module">
+		import getFilms from "./js/films.js";
+		import getSeries from "./js/series.js";
+		import Cart from "./js/cart.js";
+
+		document.querySelector('#order-end').addEventListener('click', new Cart().addOrder);
+	</script>
 
 </body>
 </html>	

@@ -1,6 +1,5 @@
- import changeModal from './postersAPI.js'
- 
- function getFilms(){
+ export default async function getFilms(){
+    console.log('hola peli')
     fetch('./data/peliculas.json')
     .then(response => response.json())
     .then(data => {
@@ -31,20 +30,24 @@
                             <div class="card-header">Duracion</div>
                             <p class="card-text">${peliculas[i].duration} minutos</p>
 							<div class="text-center container" data-toggle="modal" data-target="#pedido">
-								<button type="button" class="btn btn-primary dinBtn" data-toggle="tooltip" data-placement="top" title="Pago sólo con paypal">
+                                <button type="button" class="btn btn-primary dinBtn" data-toggle="tooltip" data-placement="top" title="Pago sólo con paypal">
 									Comprar
 								</button>
                             </div>
                         </div>
             `
         };
+        let buttons = document.querySelectorAll('.dinBtn');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].onclick = () => {
+                document.querySelector('#film-name').dataset.name = peliculas[i].title;
+                document.querySelector('#film-name').innerHTML = "Pelicula: " +  peliculas[i].title;
+                document.querySelector('#ped_precio').value = peliculas[i].price;
+            };
+        }
     });
-}
+};
 
-function init(){
-    getFilms();
-    changeModal();
-}
-init();
-
-
+(async function(){
+    await getFilms();
+})()

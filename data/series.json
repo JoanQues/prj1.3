@@ -1,0 +1,87 @@
+{
+    "posters": {
+        "series": [
+            {
+                "id": "0",
+                "title": "Fariña",
+                "gender": "Action",
+                "seasons":"2",
+                "director":"Jhon",
+                "price": 80,
+                "img": "./img/fariña.jpg",
+                "actores":[
+                    {
+                        "id":"1",
+                        "name":"Jhon",
+                        "lastname":"Walter"
+                    },
+                    {
+                        "id":"2",
+                        "name":"Megan",
+                        "lastname":"Richard"
+                    },
+                    {
+                        "id":"3",
+                        "name":"Chris",
+                        "lastname":"Harry"
+                    }
+
+                ]
+            },
+            {
+                "id": "1",
+                "title": "La casa de papel",
+                "gender": "Action",
+                "seasons":"4",
+                "director":"Jhon",
+                "price": 50,
+                "img": "./img/lacasadepapel.jpg",
+                "actores":[
+                    {
+                        "id":"1",
+                        "name":"Jhon",
+                        "lastname":"Walter"
+                    },
+                    {
+                        "id":"2",
+                        "name":"Megan",
+                        "lastname":"Richard"
+                    },
+                    {
+                        "id":"3",
+                        "name":"Chris",
+                        "lastname":"Harry"
+                    }
+
+                ]
+            },
+            {
+                "id": "2",
+                "title": "Chernobyl",
+                "gender": "Action",
+                "seasons":"1",
+                "director":"Jhon",
+                "price": 10,
+                "img": "./img/chernobyl.jpg",
+                "actores":[
+                    {
+                        "id":"1",
+                        "name":"Jhon",
+                        "lastname":"Walter"
+                    },
+                    {
+                        "id":"2",
+                        "name":"Megan",
+                        "lastname":"Richard"
+                    },
+                    {
+                        "id":"3",
+                        "name":"Chris",
+                        "lastname":"Harry"
+                    }
+
+                ]
+            }
+        ]
+    }
+}
