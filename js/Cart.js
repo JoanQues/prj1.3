@@ -38,7 +38,7 @@ export default class Cart {
     }
     
     deleteOrder() {
-    
+        localStorage.clear();
     }
 }
 if (document.querySelector('#poster-sizes')) {
